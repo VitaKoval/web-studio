@@ -1,0 +1,121 @@
+.form-feedback {
+    max-width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form-feedback__title {
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.15;
+    color: $second-text-color;
+
+}
+
+.form-feedback__group {
+    margin-bottom: 20px;
+}
+
+.form-feedback__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-feedback__label {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.form-feedback__textarea {
+    padding: 12px 16px;
+    width: 100%;
+    min-height: 120px;
+    resize: none;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border 250ms $transition-cubic;
+
+    &::placeholder {
+            color: rgba(117, 117, 117, 0.5);
+        }
+}
+
+
+
+.form-feedback__input {
+    padding: 12px 12px 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+
+    transition: border 250ms $transition-cubic;
+}
+
+
+.form-feedback__input:focus,
+.form-feedback__textarea:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+}
+
+
+.form-feedback__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+}
+
+.form-feedback__input-icon {
+    position: relative;
+}
+
+.form-feedback__input+.form-feedback__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    transition: fill 250ms $transition-cubic;
+}
+
+.form-feedback__input:focus+.form-feedback__icon {
+    fill: $accent-color;
+}
+
+.form-feedback__label-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.7;
+}
+
+.form-feedback__icon-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8.38px;
+    background-image: url(../images/check-none.svg);
+
+    transition: background-image 250ms $transition-cubic;
+}
+
+.form-feedback__checkbox:checked+.form-feedback__icon-checkbox {
+    background-image: url(../images/check.svg);
+
+}
+
+.form-feedback__link {
+    text-decoration: none;
+    color: $accent-color;
+    text-decoration-line: underline;
+}

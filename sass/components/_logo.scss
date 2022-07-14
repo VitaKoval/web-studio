@@ -1,0 +1,16 @@
+.logo {
+    font-family: $font-second;
+    color: $second-text-color;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.logo--inversion {
+    color: $contrast-text-color;
+}
+
+.logo__footer {
+    display: block;
+    margin-bottom: 20px;
+}

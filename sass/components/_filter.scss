@@ -1,0 +1,15 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @extend %list;
+}
+
+.filter__item {
+    margin-right: 8px;
+
+    &:last-child {
+            margin-right: 0;
+        }
+}
+

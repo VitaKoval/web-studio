@@ -1,0 +1,33 @@
+//  Colors
+$primary-text-color: #757575;
+$second-text-color: #212121;
+$third-text-color: rgba(255, 255, 255, 0.6);
+$contrast-text-color: #ffffff;
+$primary-bg-color: #ffffff;
+$second-bg-color: #2f303a;
+$htird-bg-color: #f5f4fa;
+$icon-color: #afb1b8;
+$accent-color: #2196f3;
+
+//  Cubic for transition
+$transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
+//  Font
+$font-primery: "Roboto", sans-serif;
+$font-second: "Raleway", sans-serif;
+
+body {
+  color: $primary-text-color;
+  background-color: $primary-bg-color;
+  font-family: $font-primery;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+
+img {
+  display: block;
+}
+
+.accent {
+  color: $accent-color;
+}

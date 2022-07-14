@@ -1,0 +1,41 @@
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    @extend %list;
+}
+
+.feature__item {
+    width: 270px;
+
+    &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+}
+
+
+
+.feature__image-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: $htird-bg-color;
+}
+
+.feature__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $second-text-color;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feature__text {
+    line-height: 1.71;
+    margin-top: 0;
+    margin-bottom: 0;
+}
