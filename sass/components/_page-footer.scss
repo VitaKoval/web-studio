@@ -1,95 +1,164 @@
 .page-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $second-bg-color;
-    border-bottom: 1px solid #000000;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $second-bg-color;
+  border-bottom: 1px solid #000000;
+
+text-align: center;
+
+@media screen and (max-width: $to-tablet) {
+    
+}
+
+  @media screen and (min-width: $tablet) {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.page-footer__contacts {
+  @media screen and (max-width: $to-tablet) {
+    margin-bottom: 60px;
+  }
+    @media screen and (min-width: $tablet) and (max-width: $to-desktop) {
+            margin-right: 165px;
+        }
 }
 
 .contacts-footer {
-    margin-right: 70px;
-    @extend %list;
+  @extend %list;
+
+  @media screen and (max-width: $to-tablet) {
+    // margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    // margin-right: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+margin-right: 70px;
+  }
 }
 
 .contacts-footer__item:not(:last-child) {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .contacts-footer__map.contacts-footer__link {
-    color: $contrast-text-color;
+  color: $contrast-text-color;
 }
 
 .contacts-footer__link {
-    text-decoration: none;
-    font-style: normal;
-    line-height: 1.71;
-    font-style: normal;
-    color: $third-text-color;
+  text-decoration: none;
+  font-style: normal;
+  line-height: 1.71;
+  font-style: normal;
+  color: $third-text-color;
 
-    transition: color 250ms $transition-cubic;
+  transition: color 250ms $transition-cubic;
 
-    &:hover,
-        &:focus {
-            color: $accent-color;
-        }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
-
-
 .page-footer__title {
-    font-weight: 700;
-    line-height: 16px;
-    text-align: left;
-    text-transform: uppercase;
-    color: $contrast-text-color;
+  font-weight: 700;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  
+  text-transform: uppercase;
+  color: $contrast-text-color;
+
+@media screen and (min-width: $desktop) {
+text-align: left;
+}
 }
 
 .social-footer {
-    display: flex;
-    @extend %list;
+  @extend %list;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $to-tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .social-footer__item:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .social-footer__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    fill: $contrast-text-color;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: $contrast-text-color;
 
-    transition: background-color 250ms $transition-cubic;
+  transition: background-color 250ms $transition-cubic;
 
-    &:hover,
-        &:focus {
-            background-color: $accent-color;
-        }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .page-footer__subscription {
+  
+  @media screen and (max-width: $to-desktop) {
+      max-width: 450px;
+    }
+
+  @media screen and (min-width: $tablet) and (max-width:$to-desktop) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
     margin-left: auto;
+    
+  }
 }
 
 .form-subscription__input {
+  height: 50px;
+  
+  color: inherit;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: inherit;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.3;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (max-width: $to-desktop) {
+    // display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop)
+ {margin-right: 12px;
     width: 358px;
-    height: 50px;
-    color: inherit;
-    padding: 15px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: inherit;
-    margin-right: 12px;
-
-    &::placeholder {
-            font-size: 16px;
-            line-height: 1.3;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.6);
-        }
+  }
 }
-

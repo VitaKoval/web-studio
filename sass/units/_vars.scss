@@ -16,6 +16,14 @@ $transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 $font-primery: "Roboto", sans-serif;
 $font-second: "Raleway", sans-serif;
 
+// Break points
+$mobile: 480px;
+$tablet: 768px;
+$to-tablet: 767px;
+$desktop: 1200px;
+$to-desktop: 1199px;
+
+
 body {
   color: $primary-text-color;
   background-color: $primary-bg-color;
