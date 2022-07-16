@@ -11,6 +11,9 @@
 
 .portfolio-card__item {
   max-width: 450px;
+  
+    border: 1px solid #eeeeee;
+
 
   &:hover,
     &:focus {
@@ -36,15 +39,12 @@
 
 .portfolio-card__img {
   display: block;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  // margin-bottom: 0;
+  // padding-bottom: 0;
 }
 
 .portfolio-card__facts {
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
 }
 
 .portfolio-card__link {

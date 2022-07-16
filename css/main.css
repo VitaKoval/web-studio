@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.site-nav, .contacts-header, .feature, .we-work, .team, .social-team, .clients, .contacts-footer, .social-footer, .filter, .portfolio-card {
+.site-nav, .contactsmob-header, .contacts-header, .feature, .we-work, .team, .social-team, .clients, .contacts-footer, .social-footer, .filter, .portfolio-card {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -184,12 +184,39 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.button-menu {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .button-menu {
+    display: inline-flex;
+    padding: 12px 8px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.button-menu .button-menu__icon-close {
+  display: none;
+}
+
+.button-menu.is-open .button-menu__icon-close {
+  display: block;
+}
+
+.button-menu.is-open .button-menu__icon-menu {
+  display: none;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   color: #212121;
   font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -209,6 +236,14 @@ img {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (max-width: 767px) {
+  .page-header__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -271,19 +306,30 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .contactsmob-header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .contacts-header {
     display: flex;
     margin-left: auto;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .contacts-header__item {
-    margin-right: 50px;
-  }
-  .contacts-header__item:last-child {
-    margin-right: 0;
-  }
+.contacts-header__item {
+  margin-right: 50px;
+}
+
+.contacts-header__item:last-child {
+  margin-right: 0;
 }
 
 .contacts-header__link {
@@ -308,17 +354,9 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .contacts-header__icon {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contacts-header__icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
+.contacts-header__icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .overlay {
@@ -954,6 +992,7 @@ img {
 
 .portfolio-card__item {
   max-width: 450px;
+  border: 1px solid #eeeeee;
 }
 
 .portfolio-card__item:hover, .portfolio-card__item:focus {
@@ -981,15 +1020,10 @@ img {
 
 .portfolio-card__img {
   display: block;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .portfolio-card__facts {
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
 }
 
 .portfolio-card__link {
