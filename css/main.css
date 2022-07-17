@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.site-nav, .contactsmob-header, .contacts-header, .feature, .we-work, .team, .social-team, .clients, .contacts-footer, .social-footer, .filter, .portfolio-card {
+.site-nav, .contactsmob-header, .social-header, .contacts-header, .feature, .we-work, .team, .social-team, .clients, .contacts-footer, .social-footer, .filter, .portfolio-card {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -194,6 +194,7 @@ img {
     padding: 12px 8px;
     border: none;
     background-color: transparent;
+    z-index: 3;
   }
 }
 
@@ -207,6 +208,10 @@ img {
 
 .button-menu.is-open .button-menu__icon-menu {
   display: none;
+}
+
+.button-menu:hover, .button-menu:focus {
+  fill: #2196f3;
 }
 
 .logo {
@@ -243,6 +248,31 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-header__nav {
+    outline: 1px solid red;
+    display: none;
+  }
+  .page-header__nav.is-open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    min-width: 350px;
+    padding: 48px 40px;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    margin-bottom: 302px;
   }
 }
 
@@ -250,6 +280,12 @@ img {
   .site-nav {
     display: flex;
     margin-left: 93px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__item {
+    margin-bottom: 32px;
   }
 }
 
@@ -305,10 +341,35 @@ img {
   color: #2196f3;
 }
 
+.contactsmob-header {
+  margin-bottom: 64px;
+}
+
 @media screen and (min-width: 768px) {
   .contactsmob-header {
     display: none;
   }
+}
+
+.social-header {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .social-header {
+    display: none;
+  }
+}
+
+.social-header__item:not(:first-child) {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.social-header__link {
+  text-decoration: none;
+  color: #2196f3;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -330,6 +391,20 @@ img {
 
 .contacts-header__item:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-header__item {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+  .contacts-header__item .contacts-header__link--accent {
+    display: block;
+    font-size: 34px;
+    line-height: 1.2;
+    color: #2196f3;
+    margin-bottom: 32px;
+  }
 }
 
 .contacts-header__link {

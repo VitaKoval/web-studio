@@ -1,5 +1,7 @@
 .page-header {
+  
   border-bottom: 1px solid #ececec;
+  
 }
 
 .page-header__mobile {
@@ -7,12 +9,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
+  }
+}
+
+.page-header__nav {
+  @media screen and (max-width: $to-tablet) {
+outline: 1px solid red;
+
+display: none;
+
+&.is-open {
+position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  min-width: 350px;
+
+  padding: 48px 40px;
+  z-index: 2;
+
+  background-color: $primary-bg-color;
+}
+
   }
 }
 
 .site-nav {
   @extend %list;
 
+  @media screen and (max-width: $to-tablet) {
+    margin-bottom: 302px;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: 93px;
@@ -20,6 +51,10 @@
 }
 
 .site-nav__item {
+  @media screen and (max-width: $to-tablet){
+    margin-bottom: 32px;
+  }
+
   @media screen and (min-width: $tablet) {
     margin-right: 50px;
 
@@ -75,11 +110,43 @@
 
 .contactsmob-header {
   @extend %list;
+  margin-bottom: 64px;
 
   @media screen and (min-width: $tablet) {
     display: none;
   }
 }
+
+.social-header {
+  @extend %list;
+  display: inline-flex;
+  align-items: center;
+
+  
+
+  @media screen and (min-width: $tablet) {
+      display: none;
+    }}
+
+        .social-header__item:not(:first-child) {
+          border-left: 1px solid rgba(33, 33, 33, 0.2);
+        }
+
+    .social-header__link {
+      text-decoration: none;
+      color: $accent-color;
+      padding: 0 10px;
+
+
+      
+        }
+    
+   
+    
+    
+          
+        
+
 
 .contacts-header {
   @extend %list;
@@ -100,6 +167,18 @@
   &:last-child {
     margin-right: 0;
   }
+    @media screen and (max-width: $to-tablet) {
+      font-size: 24px;
+      line-height: 1.16;
+
+      .contacts-header__link--accent {
+        display: block;
+        font-size: 34px;
+        line-height: 1.2;
+        color: $accent-color;
+        margin-bottom: 32px;
+      }
+    }
 }
 
 .contacts-header__link {
@@ -116,7 +195,8 @@
     &:focus {
       color: $accent-color;
     }
-
+  
+    
  @media screen and (min-width: $tablet) {
   display: inline-flex;
   align-items: center;

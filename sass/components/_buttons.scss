@@ -86,6 +86,7 @@
     padding: 12px 8px;
     border: none;
     background-color: transparent;
+    z-index: 3;
   }
 
   .button-menu__icon-close {
@@ -97,4 +98,10 @@
   &.is-open .button-menu__icon-menu {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
 }
