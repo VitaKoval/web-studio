@@ -79,15 +79,11 @@
 }
 
 .button-menu {
-  display: none;
-
-  @media screen and (max-width: $to-tablet) {
-    display: inline-flex;
-    padding: 12px 8px;
-    border: none;
-    background-color: transparent;
-    z-index: 3;
-  }
+  display: inline-flex;
+  padding: 12px 8px;
+  border: none;
+  background-color: transparent;
+  z-index: 3;
 
   .button-menu__icon-close {
     display: none;
@@ -98,10 +94,13 @@
   &.is-open .button-menu__icon-menu {
     display: none;
   }
-
-  &:hover,
-  &:focus {
+  .button-menu__icon-menu:hover, .button-menu__icon-menu:focus,
+  &.is-open .button-menu__icon-close:hover,
+  &.is-open .button-menu__icon-close:focus {
     fill: $accent-color;
   }
 
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }

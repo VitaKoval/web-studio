@@ -97,6 +97,10 @@
     align-items: center;
     justify-content: center;
     line-height: 1.7;
+    
+    @media screen and (max-width: $to-desktop) {
+        font-size: 12px;
+    }
 }
 
 .form-feedback__icon-checkbox {
