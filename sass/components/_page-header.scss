@@ -16,8 +16,6 @@
 
 .page-header__nav {
   @media screen and (max-width: $to-tablet) {
-outline: 1px solid red;
-
 display: none;
 
 &.is-open {
