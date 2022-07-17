@@ -13,10 +13,6 @@
   transform: scaleX(100%);
 
   transition: opacity 250ms $transition-cubic, transform 250ms $transition-cubic;
-
-  @media screen and (max-width: $to-tablet) {
-    padding: 93px 15px;
-  }
 }
 
 .backdrop.is-hidden {
@@ -28,17 +24,21 @@
 }
 
 .modal {
-  position: absolute;
-  max-width: 450px;
-  min-height: 609px;
-  background-color: $primary-bg-color;
-
-  @media screen and (min-width: $tablet) {
-    top: 50%;
-    left: 50%;
-    width: 450px;
-    height: 609px;
-    transform: translate(-50%, -50%);
+ 
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     
-  }
+      width: 450px;
+      height: 609px;
+      background-color: $primary-bg-color;
+      border-radius: 4px;
+  
+  
+ 
+    
+  
+    
+    
 }

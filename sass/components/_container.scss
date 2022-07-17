@@ -1,21 +1,18 @@
 /* Контейнер для контента сайта */
 .container {
-    // width: 1200px;
+    min-width: 480px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (min-width: 480px) {
-     width:$mobile;
-    }
+    
 
     @media screen and (min-width: 768px) {
-        width: $tablet;
+    width: 768px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: $desktop;
+    width: 1200px;
         
     }
 }
