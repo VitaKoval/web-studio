@@ -35,6 +35,10 @@
       background-color: $primary-bg-color;
       border-radius: 4px;
   
+      @media screen and (min-width: $desktop) {
+        width: 528px;
+        height: 581px;
+      }
   
  
     

@@ -1,16 +1,18 @@
 .portfolio-card {
   @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+ 
   
 
   @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
+    
     margin: -15px;
   }
 }
 
 .portfolio-card__item {
-  max-width: 450px;
+  
   
     border: 1px solid #eeeeee;
 
@@ -23,6 +25,7 @@
 
   @media screen and (max-width: $to-tablet) {
 &:not(:last-child) {
+   
     margin-bottom: 30px;
   }
   }
@@ -39,8 +42,20 @@
 
 .portfolio-card__img {
   display: block;
-  // margin-bottom: 0;
-  // padding-bottom: 0;
+  @media screen and (max-width: $to-tablet) {
+      min-width: 450px;
+      height: 294px;
+    }
+  
+    @media screen and (max-width: $to-desktop) {
+    width: 354px;
+    height: 294px;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      width: 370px;
+      height: 294px;;
+    }
 }
 
 .portfolio-card__facts {
