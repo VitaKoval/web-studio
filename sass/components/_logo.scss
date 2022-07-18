@@ -1,24 +1,24 @@
 .logo {
-    font-family: $font-second;
-    color: $second-text-color;
-    
-    font-size: 24px;
-    line-height: 1.2;
-    text-decoration: none;
-padding-top: 16px;
-    padding-bottom: 16px;
+  font-family: $font-second;
+  color: $second-text-color;
 
- @media screen and (min-width: $desktop) {
+  font-size: 24px;
+  line-height: 1.2;
+  text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: $desktop) {
     font-size: 26px;
- }
- 
+  }
 }
 
 .logo--inversion {
-    color: $contrast-text-color;
+  color: $contrast-text-color;
 }
 
 .logo__footer {
-    display: block;
-    margin-bottom: 20px;
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
 }

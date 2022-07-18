@@ -18,7 +18,10 @@
   
   @media screen and (max-width: $to-tablet) {
     margin-bottom: 30px;
-    max-width: 450px;
+    width: 450px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: $tablet) {
@@ -34,7 +37,7 @@
 .team__img {
 
   @media screen and (max-width: $to-tablet) {
-    width: 450px;
+    min-width: 450px;
   }
 
   @media screen and (max-width: $to-desktop) {

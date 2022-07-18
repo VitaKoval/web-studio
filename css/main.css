@@ -187,7 +187,7 @@ img {
   padding: 12px 8px;
   border: none;
   background-color: transparent;
-  z-index: 3;
+  z-index: 4;
 }
 
 .button-menu .button-menu__icon-close {
@@ -237,6 +237,7 @@ img {
 .logo__footer {
   display: block;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .page-header {
@@ -257,13 +258,15 @@ img {
     display: none;
   }
   .page-header__nav.is-open {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: block;
-    min-width: 767px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    overflow-y: scroll;
     padding: 48px 40px;
-    z-index: 2;
     background-color: #ffffff;
   }
 }
@@ -498,7 +501,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .overlay {
-    min-width: 1600px;
+    width: 1600px;
     height: 600px;
     background-size: 1600px 600px;
   }
@@ -711,6 +714,9 @@ img {
   .feature__item {
     margin-bottom: 30px;
   }
+  .feature__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -812,7 +818,10 @@ img {
 @media screen and (max-width: 767px) {
   .team__item {
     margin-bottom: 30px;
-    max-width: 450px;
+    width: 450px;
+  }
+  .team__item:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -831,7 +840,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .team__img {
-    width: 450px;
+    min-width: 450px;
   }
 }
 
